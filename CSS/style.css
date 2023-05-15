@@ -12,14 +12,14 @@
 }
 
 :root {
-    --bg-color:#0a1620;
+    --bg-color: #0a1620;
     --text-color: #fdfdfd;
     --shadow-color: rgba(11, 10, 10, 0.7);
     --main-color: rgb(210, 156, 41);
     --white-color: #fdfdfd;
 }
 
-.dark-mode{
+.dark-mode {
     --bg-color: #fdfdfd;
     --text-color: #333;
     --main-color: #10bba4;
@@ -34,6 +34,32 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+.popup {
+    overflow: hidden;
+    top: 30rem;
+    background-color: var(--bg-color);
+    width: 50rem;
+    padding: 3rem 4rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 20%;
+    right: 80%;
+    border-radius: 1rem;
+    font-family: "Poppins", sans-serif;
+    display: none;
+}
+
+.popup button {
+    display: block;
+    margin: 0 8rem 1rem auto;
+    background-color: transparent;
+    font-size: 3rem;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .header {
@@ -188,20 +214,29 @@ section {
 }
 
 @keyframes professionRotate {
-    0%,20%{
-        transform:rotate(0deg);
+
+    0%,
+    20% {
+        transform: rotate(0deg);
     }
-    25%,45%{
-        transform:rotate(-90deg);
+
+    25%,
+    45% {
+        transform: rotate(-90deg);
     }
-    50%,70%{
-        transform:rotate(-180deg);
+
+    50%,
+    70% {
+        transform: rotate(-180deg);
     }
-    75%,95%{
-        transform:rotate(-270deg);
+
+    75%,
+    95% {
+        transform: rotate(-270deg);
     }
-    100%{
-        transform:rotate(-360deg);
+
+    100% {
+        transform: rotate(-360deg);
     }
 }
 
@@ -260,7 +295,7 @@ section {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 36%;
+    width: 30%;
     pointer-events: none;
 }
 
@@ -302,6 +337,7 @@ span {
 
 .about-img img {
     width: 30vw;
+    border-radius: 100%;
 }
 
 .heading {
@@ -324,7 +360,7 @@ span {
 }
 
 
-.skills_section{
+.skills_section {
     width: 100%;
     height: 100vh;
     padding: 0px 13%;
@@ -333,24 +369,29 @@ span {
     justify-content: center;
     flex-direction: column;
 }
-.skills_head{
+
+.skills_head {
     width: 100%;
     margin-bottom: 100px;
     display: grid;
     place-items: center;
     text-align: center;
 }
-.skills_head h2{
+
+.skills_head h2 {
     font-size: 4.5rem;
     margin-bottom: -5px;
 }
-.skills_head p{
+
+.skills_head p {
     font-size: 2rem;
 }
-.skills_head h2 span{
+
+.skills_head h2 span {
     color: var(--main-color);
 }
-.skills_main{
+
+.skills_main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -358,19 +399,22 @@ span {
     grid-column-gap: 8rem;
 }
 
-.skills_main .skill_bar .info{
+.skills_main .skill_bar .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:  0 1rem;
+    padding: 0 1rem;
 }
-.skill_bar .info p{
+
+.skill_bar .info p {
     font-size: medium;
 }
-.skill_bar .info p:nth-child(2){
+
+.skill_bar .info p:nth-child(2) {
     font-weight: 500;
 }
-.skill_bar .bar{
+
+.skill_bar .bar {
     width: 100%;
     height: 10px;
     background-color: rgba(0, 0, 0, 0.144);
@@ -378,99 +422,132 @@ span {
     margin-top: 5px;
     position: relative;
 }
-.skill_bar .bar span{
+
+.skill_bar .bar span {
     width: 50%;
     height: 100%;
     position: absolute;
     background-color: var(--main-color);
     border-radius: 25px;
 }
-.skill_bar .bar .html{
+
+.skill_bar .bar .html {
     width: 85%;
     animation: html 2s;
 }
+
 @keyframes html {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 85%;
     }
 }
-.skill_bar .bar .css{
+
+.skill_bar .bar .css {
     width: 80%;
     animation: css 2s;
 }
+
 @keyframes css {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 80%;
     }
 }
-.skill_bar .bar .kotlin{
+
+.skill_bar .bar .kotlin {
     width: 75%;
     animation: kotlin 2s;
 }
+
 @keyframes kotlin {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 75%;
     }
 }
-.skill_bar .bar .js{
+
+.skill_bar .bar .js {
     width: 70%;
     animation: css 2s;
 }
+
 @keyframes js {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 70%;
     }
 }
-.skill_bar .bar .cpp{
+
+.skill_bar .bar .cpp {
     width: 90%;
     animation: cpp 2s;
 }
+
 @keyframes cpp {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 90%;
     }
 }
-.skill_bar .bar .c{
+
+.skill_bar .bar .c {
     width: 80%;
     animation: c 2s;
 }
+
 @keyframes c {
-    0%{
+    0% {
         width: 0%;
-    }100%{
+    }
+
+    100% {
         width: 80%;
     }
 }
-.skill_bar .bar .team-management{
-    width: 70%;
+
+.skill_bar .bar .team-management {
+    width: 80%;
     animation: team-management 2s;
 }
+
 @keyframes team-management {
-    0%{
+    0% {
         width: 0%;
-    }100%{
-        width: 70%;
+    }
+
+    100% {
+        width: 80%;
     }
 }
-.skill_bar .bar .creativity{
-    width: 65%;
+
+.skill_bar .bar .creativity {
+    width: 75%;
     animation: creativity 2s;
 }
+
 @keyframes creativity {
-    0%{
+    0% {
         width: 0%;
-    }100%{
-        width: 65%;
+    }
+
+    100% {
+        width: 75%;
     }
 }
 
@@ -756,11 +833,11 @@ span {
 }
 
 /* breakpoints */
-@media (min-width: 1800px){
-    html{
+@media (min-width: 1800px) {
+    html {
         font-size: 80%;
-    }    
-    
+    }
+
     .home .profession-container {
         position: absolute;
         top: 50%;
@@ -771,7 +848,7 @@ span {
         overflow: hidden;
         pointer-events: none;
     }
-    
+
     .home .profession-container .profession-box {
         position: absolute;
         top: 0;
@@ -784,7 +861,7 @@ span {
         align-items: center;
         animation: professionRotate 13s ease-out infinite;
     }
-    
+
     .home .profession-box .profession {
         position: absolute;
         left: 0;
@@ -796,24 +873,25 @@ span {
         transform-origin: 570px;
         background: var(--bg-color);
         padding: 10px 0;
-        
+
     }
-    
+
     .home .profession-box .circle {
         width: 60rem;
         height: 60rem;
     }
-    
+
     .home .profession-container .overlay {
         position: absolute;
         border-top: 500px solid var(--main-color);
         border-right: 500px solid var(--main-color);
         border-bottom: 500px solid var(--main-color);
         border-left: 500px solid transparent;
-       
+
     }
-    
+
 }
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -852,6 +930,11 @@ span {
 }
 
 @media (max-width: 991px) {
+    .popup {
+        top: 20rem;
+        left: 55%;
+        right: 45%;
+    }
 
     .navbar a:nth-child(1),
     .navbar a:nth-child(2) {
@@ -865,7 +948,7 @@ span {
 
     .home .home-content {
         max-width: 50rem;
-    } 
+    }
 
     .home .profession-container .profession-box {
         right: -45rem;
@@ -892,6 +975,7 @@ span {
         padding: 2rem 3%;
     }
 }
+
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -903,6 +987,12 @@ span {
         font-size: 2.4rem;
         color: var(--text-color);
         margin-bottom: .1rem;
+    }
+
+    .popup {
+        top: 10rem;
+        left: 55%;
+        right: 45%;
     }
 
     .navbar {
@@ -959,11 +1049,12 @@ span {
         margin: 2.5rem .75rem 3rem;
     }
 
-    .home .profession-container{
+    .home .profession-container {
         left: 0;
         width: 100%;
         height: 100%;
     }
+
     .home .profession-container .profession-box {
         position: fixed;
         top: 60%;
@@ -1055,28 +1146,43 @@ span {
     .portfolio .portfolio-container {
         grid-template-columns: 1fr;
     }
+    .popup {
+        top: 10rem;
+        left: 55%;
+        right: 45%;
+    }
 
 }
 
 @media (max-width: 450px) {
-    
+
     html {
         font-size: 50%;
     }
-
+    
     #darkMode-icon {
         right: 6rem;
     }
+
+    .popup {
+        top: 20rem;
+        left: 55%;
+        right: 45%;
+    }
+
     .home {
         margin-top: 6rem;
         padding: 0 3% 30rem;
     }
-    .home .profession-container .overlay{
+
+    .home .profession-container .overlay {
         top: 80%;
     }
+
     .home .profession-box .profession:nth-child(1) {
         transform: rotate(-90deg) translate(-110px, -220px);
     }
+
     .home .profession-box .profession:nth-child(2) {
         transform: rotate(0deg) translate(5px, -335px);
     }
@@ -1093,35 +1199,48 @@ span {
         width: 100%;
     }
 }
-@media (max-width: 376px){ 
-    *{
+
+@media (max-width: 376px) {
+    * {
         /* display: -ms-flexbox; */
         justify-content: center;
         align-items: center;
     }
-    .about-img img{
+
+    .about-img img {
         width: 90vw;
     }
-    .footer{
+
+    .footer {
         flex-direction: column-reverse;
     }
-    .footer p{
+
+    .footer p {
         text-align: center;
         margin-top: 2rem;
     }
 }
-@media (max-width: 320px){  
-    html{
+
+@media (max-width: 320px) {
+    html {
         font-size: 45%;
-    }  
+    }
+
+    .popup {
+        left: 60%;
+        right: 40%;
+    }
+
     .home .profession-box .circle {
         width: 600px;
         height: 580px;
     }
+
     .home .profession-container .overlay {
         top: 80rem;
         left: 50%;
     }
+
     .home {
         margin-top: 10rem;
         padding: 0 3% 30rem;
@@ -1130,6 +1249,7 @@ span {
     .home .profession-box .profession:nth-child(1) {
         transform: rotate(-90deg) translate(-105px, -190px);
     }
+
     .home .profession-box .profession:nth-child(2) {
         transform: rotate(0deg) translate(5px, -290px);
     }
